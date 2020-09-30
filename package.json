@@ -1,0 +1,15 @@
+{
+  "name": "jest-playwright-docker",
+  "version": "1.0.0",
+  "description": "jest playwright simple example",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Moin Tanvee",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "26.4.2",
+    "playwright": "1.4.2"
+  }
+}
