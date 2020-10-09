@@ -6,7 +6,7 @@ describe(`UI Tests with Playwright`, () => {
 
   beforeAll(async () => {
     browser = await playwright["chromium"].launch({ headless: false });
-  
+
     page = await browser.newPage();
   
     await page.goto('https://www.athabascau.ca/');
@@ -18,14 +18,27 @@ describe(`UI Tests with Playwright`, () => {
     const titleText = await page.evaluate(title => title.textContent, title);
     
     expect(titleText).toBe("How AU Works Athabasca University");
+
+    const howAUWorksLink = await page.$('.link-block.local-link');
+
+    await Promise.all([
+      page.waitForNavigation(),
+      page.evaluate(howAUWorksLink => howAUWorksLink.click(), howAUWorksLink)
+    ]);
+
+    const formSubmitButton = await page.$('#submit');
+
+    const formSubmitButtonText = await page.evaluate(formSubmitButton => formSubmitButton.textContent, formSubmitButton);
+
+    expect(formSubmitButtonText).toBe("Submit");
   })
 
   test('sample test 2', async () => {
-    const copyright = await page.$('#copyright');
+    const contentTitle = await page.$('#content-title');
   
-    const copyrightText = await page.evaluate(copyright => copyright.textContent, copyright);
-    
-    expect(copyrightText).toBe("© 2020 Athabasca University is a world-class leader in online and distance education. Based in Alberta and available online around the world, we are Canada's Open, Online University. Privacy Policy");
+    const contentTitleText = await page.evaluate(contentTitle => contentTitle.textContent, contentTitle);
+
+    expect(contentTitleText).toBe('How AU Works');
   })
 
   afterAll(async () => {
