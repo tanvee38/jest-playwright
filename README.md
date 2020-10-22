@@ -1,4 +1,4 @@
-# jest-playwright
+# e2e-test-framework
 Simple example on how to run UI tests built with Jest & Playwright.
 
 ## Install node.JS.
@@ -15,7 +15,7 @@ NPM version 6.14.4 or latest
 1. install packages: ```npm install```
 2. Run test: ```BROWSER=chromium npm test```
 3. Run test files sequentially: ```BROWSER=chromium npm run test-serial```
-4. Run single test file: ```BROWSER=chromium npm test SomeTestFileToRun``` e.g: ```BROWSER=chromium npm test ./__tests__/sample.tests.jest-playwright.js```
+4. Run single test file: ```BROWSER=chromium npm test SomeTestFileToRun``` e.g: ```BROWSER=chromium npm test ./__tests__/sample1.tests.jest-playwright.js```
 
 To run tests with firefox, or any other supported browser you can set browser name using an environment variable.
 
