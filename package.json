@@ -4,12 +4,13 @@
   "description": "jest playwright simple example",
   "main": "app.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test-serial": "jest -i"
   },
   "author": "Moin Tanvee",
   "license": "ISC",
-  "dependencies": {
-    "jest": "26.4.2",
-    "playwright": "1.4.2"
+  "devDependencies": {
+    "jest": "^26.4.2",
+    "playwright": "^1.5.1"
   }
 }

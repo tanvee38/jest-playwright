@@ -5,7 +5,7 @@ describe(`UI Tests with Playwright`, () => {
   let page;
 
   beforeAll(async () => {
-    browser = await playwright["chromium"].launch({ headless: false });
+    browser = await playwright[process.env.BROWSER].launch({ headless: false, slowMo: 300 });
 
     page = await browser.newPage();
   
