@@ -25,4 +25,5 @@ Will add later
 
 ## To run test on docker container
 
-will add later
+1. Build docker image: docker build -t jest-playwright .
+2. Run test on docker container: docker run jest-playwright npm test
