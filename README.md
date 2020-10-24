@@ -21,4 +21,8 @@ To run tests with firefox, or any other supported browser you can set browser na
 
 ## project hierarchy
 
+Will add later
+
 ## To run test on docker container
+
+will add later
