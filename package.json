@@ -4,13 +4,14 @@
   "description": "jest playwright simple example",
   "main": "app.js",
   "scripts": {
-    "test": "jest",
-    "test-serial": "jest -i"
+    "test": "jest -i",
+    "report": "allure serve"
   },
   "author": "Moin Tanvee",
   "license": "ISC",
   "devDependencies": {
     "jest": "^26.4.2",
-    "playwright": "^1.5.1"
+    "playwright": "^1.5.1",
+    "jest-allure": "^0.1.3"
   }
 }

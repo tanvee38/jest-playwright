@@ -1,3 +1,5 @@
+jest.setTimeout(30000);
+
 const playwright = require('playwright');
 
 describe(`UI Tests with Playwright`, () => {
@@ -5,7 +7,7 @@ describe(`UI Tests with Playwright`, () => {
   let page;
 
   beforeAll(async () => {
-    browser = await playwright["chromium"].launch({ headless: false, slowMo: 300 });
+    browser = await playwright["chromium"].launch({headless: false});
 
     page = await browser.newPage();
   

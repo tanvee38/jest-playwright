@@ -10,6 +10,10 @@
           "${workspaceRoot}/node_modules/.bin/jest",
           "--runInBand"
         ],
+        "env": {
+          "BROWSER": "chromium",
+          "HEADLESS": "false"
+        },
         "console": "integratedTerminal",
         "internalConsoleOptions": "neverOpen",
         "port": 9229
