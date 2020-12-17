@@ -14,6 +14,10 @@ End-to-End test framework built with Jest & Playwright. It includes set up proce
 
 To run tests with firefox, or any other supported browser you can set browser name using an environment variable.
 
+## Generate allure report: ```
+2. Show allure report in browser: ```npm run report```
+
+
 ## To run test on docker container
 
 1. Build docker image: docker build -t jest-playwright .
