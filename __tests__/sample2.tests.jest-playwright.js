@@ -7,8 +7,10 @@ describe(`UI Tests with Playwright`, () => {
   let page;
 
   beforeAll(async () => {
-    browser = await playwright["chromium"].launch({headless: false});
+    const headless = process.env.HEADLESS === 'true';
 
+    browser = await playwright[process.env.BROWSER].launch({ headless: headless, args: ["--no-sandbox", "--disable-setuid-sandbox"]});
+    
     page = await browser.newPage();
   
     await page.goto('https://www.athabascau.ca/');
@@ -28,11 +30,11 @@ describe(`UI Tests with Playwright`, () => {
       page.evaluate(howAUWorksLink => howAUWorksLink.click(), howAUWorksLink)
     ]);
 
-    const formSubmitButton = await page.$('#submit');
+    const formSubmitButton = await page.$(`input[type="submit"]`);
 
-    const formSubmitButtonText = await page.evaluate(formSubmitButton => formSubmitButton.textContent, formSubmitButton);
+    const formSubmitButtonText = await page.evaluate(formSubmitButton => formSubmitButton.value, formSubmitButton);
 
-    expect(formSubmitButtonText).toBe("Submit");
+    expect(formSubmitButtonText).toBe("Get Started");
   })
 
   test('sample test 2', async () => {

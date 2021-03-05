@@ -5,13 +5,16 @@
   "main": "app.js",
   "scripts": {
     "test": "jest -i",
+    "test-firefox-headless": "BROWSER='firefox' HEADLESS='true' npm test",
+    "test-firefox-headful": "BROWSER='firefox' HEADLESS='false' npm test",
+    "test-chromium-headless": "BROWSER='chromium' HEADLESS='true' npm test",
+    "test-chromium-headful": "BROWSER='chromium' HEADLESS='false' npm test",
     "report": "allure serve"
   },
   "author": "Moin Tanvee",
   "license": "ISC",
   "devDependencies": {
     "jest": "^26.4.2",
-    "playwright": "^1.5.1",
     "jest-allure": "^0.1.3"
   }
 }
