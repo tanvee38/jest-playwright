@@ -21,9 +21,9 @@ To run tests with other supported browsers check differnt package.json scripts.
 
 ## To run test on docker container
 
-1. Build docker image: docker build -t jest-playwright .
-2. Run test with firefox on docker container: docker run jest-playwright npm run test-firefox-headless
-3. Run test with chromium on docker container: docker run jest-playwright npm run test-chromium-headless
+1. Build docker image: ```docker build -t jest-playwright .```
+2. Run test with firefox on docker container: ```docker run jest-playwright npm run test-firefox-headless```
+3. Run test with chromium on docker container: ```docker run jest-playwright npm run test-chromium-headless```
 
 ## To run test on CI environment
 
