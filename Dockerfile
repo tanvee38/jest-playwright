@@ -85,6 +85,8 @@ RUN mkdir /app
 # Set the working directory to /app
 WORKDIR /app
 
+RUN npm i -D playwright
+
 # Copy the current directory contents into the container
 COPY . .
 
@@ -93,5 +95,3 @@ COPY package.json .
 COPY package-lock.json .
 
 RUN npm install
-
-RUN npm i -D playwright

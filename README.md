@@ -9,9 +9,8 @@ End-to-End test framework built with Jest & Playwright. It includes set up proce
 ## To run test locally:
 
 1. install packages: ```npm install```
-2. install playwright: ```npm i -D playwright```
-3. Run test: ```npm run test-firefox-headless```
-4. Run single test file: ```npm run test-firefox-headless SomeTestFileToRun``` e.g: ```npm run test-firefox-headless ./__tests__/sample1.tests.jest-playwright.js```
+2. Run test: ```npm run test-firefox-headless```
+3. Run single test file: ```npm run test-firefox-headless SomeTestFileToRun``` e.g: ```npm run test-firefox-headless ./__tests__/sample1.tests.jest-playwright.js```
 
 To run tests with other supported browsers check differnt package.json scripts.
 
