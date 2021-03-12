@@ -85,8 +85,6 @@ RUN mkdir /app
 # Set the working directory to /app
 WORKDIR /app
 
-RUN npm i -D playwright
-
 # Copy the current directory contents into the container
 COPY . .
 
